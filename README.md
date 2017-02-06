@@ -4,3 +4,44 @@ One time use windows for linux user who only need to use office from Microsoft
 Everyone knows Microsoft Office make most profit for Microsoft, therefore there are thousands of reason why Microsoft never want to have a Linux versioin of Office.  
 
 ![screen shot 2017-02-05 at 9 01 45 pm](https://cloud.githubusercontent.com/assets/5915590/22633416/d5c1fb98-ebe6-11e6-9dd8-c72ea7f2ba54.png)
+
+For linux users there are LibreOffice, OpenOffice ,Calligra Suite... but Microsoft continuously changing their format so people can nerver leave Windows since you never know if your business patner will one day just couldn't open your OpenOffice file and you end up losing your time or busisness opportunities.
+
+this solution is for someone who have a Linux working enviroment but nobody needs anything from Windows besides Microsoft Office.
+
+1. First we create a Windows image in VirtualBox. Install and register everything you need (Don't forget to install VirtualBox Guest Additions as well for NFS mount later).
+
+2. Make sure Windows boot up normally and shut it down. 
+
+3. Go to your home directory and copy the .VirtualBox folder back to your NFS share storage space.
+
+4. Use my script and put it into a NFS PATH and modify it to fix your enviroment.
+
+#!/bin/bash
+#set -x
+
+echo "30%" ; sleep 1
+echo "# Preparing the Virtual Machine to start"; sleep 1
+rm -rf ~/.VirtualBox
+cp -r /site/mtktools/VM/.VirtualBox ~/.VirtualBox
+
+echo "50%" ; sleep 1
+echo "# Configuring the Virtual Machine"; sleep 1
+#Win7_64_super is the image I create which have everthing I need for this Windows image
+sed -i "s/_CURRENTUSR_/$USER/g" ~/.VirtualBox/Win7_64_super_3/Win7_64_super_3.vbox
+sed -i "s/_CURRENTUSR_/$USER/g" ~/.VirtualBox/VirtualBox.xml
+
+echo "99%" ; sleep 1
+echo "# Starting Windows..."; sleep 1
+vboxmanage sharedfolder add Win7_64_super_3 --name $USER --hostpath /USERS_HOME_DIRECTORY/ --automount
+vboxmanage modifyvm Win7_64_super_3 --clipboard bidirectional
+
+echo "100%" ; sleep 1
+echo "# Starting Windows..."; sleep 1
+#this one is if optional you want to use LSF to run virtual box for you
+bsub -Is virtualbox --startvm Win7_64_super_3
+
+
+
+
+
