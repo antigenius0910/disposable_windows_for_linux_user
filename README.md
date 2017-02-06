@@ -1,11 +1,11 @@
 # disposable_windows_for_linux_user
 >One time use windows for linux user who only need to use office from Microsoft 
 
-Everyone knows Microsoft Office make most profit for Microsoft, therefore there are thousands of reason why Microsoft never want to have a Linux versioin of Office.  
+Everyone knows Microsoft Office make most profit for Microsoft, therefore there are thousands of reasons why Microsoft never want to have a Linux versioin of Office.  
 
 ![screen shot 2017-02-05 at 9 01 45 pm](https://cloud.githubusercontent.com/assets/5915590/22633416/d5c1fb98-ebe6-11e6-9dd8-c72ea7f2ba54.png)
 
-For linux users there are LibreOffice, OpenOffice ,Calligra Suite... but Microsoft continuously changing their format so people can nerver leave Windows since you never know if your business patner will one day just couldn't open your OpenOffice file and you end up losing your time or busisness opportunities.
+For linux users there are LibreOffice, OpenOffice ,Calligra Suite... but Microsoft continuously changing their format so people can nerver leave Windows since you never know if your business patners will one day just couldn't open your OpenOffice files and you end up losing your time or busisness opportunities.
 
 this solution is for someone who have a Linux working enviroment but nobody needs anything from Windows besides Microsoft Office.
 
