@@ -19,5 +19,5 @@ vboxmanage modifyvm Win7_64_super_3 --clipboard bidirectional
 
 echo "100%" ; sleep 1
 echo "# Starting Windows..."; sleep 1
-#this one is if optional you want to use LSF to run virtual box for you
+#this one is optional if you want to use LSF to run virtual box for you
 bsub -Is virtualbox --startvm Win7_64_super_3
