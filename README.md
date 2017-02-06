@@ -15,31 +15,7 @@ this solution is for someone who have a Linux working enviroment but nobody need
 
 3. Go to your home directory and copy the .VirtualBox folder back to your NFS share storage space.
 
-4. Use my script and put it into a NFS PATH and modify it to fix your enviroment.
-
->#!/bin/bash
->#set -x
-
->echo "30%" ; sleep 1
-echo "# Preparing the Virtual Machine to start"; sleep 1
-rm -rf ~/.VirtualBox
-cp -r /site/mtktools/VM/.VirtualBox ~/.VirtualBox
-
-echo "50%" ; sleep 1
-echo "# Configuring the Virtual Machine"; sleep 1
-#Win7_64_super is the image I create which have everthing I need for this Windows image
-sed -i "s/_CURRENTUSR_/$USER/g" ~/.VirtualBox/Win7_64_super_3/Win7_64_super_3.vbox
-sed -i "s/_CURRENTUSR_/$USER/g" ~/.VirtualBox/VirtualBox.xml
-
-echo "99%" ; sleep 1
-echo "# Starting Windows..."; sleep 1
-vboxmanage sharedfolder add Win7_64_super_3 --name $USER --hostpath /USERS_HOME_DIRECTORY/ --automount
-vboxmanage modifyvm Win7_64_super_3 --clipboard bidirectional
-
-echo "100%" ; sleep 1
-echo "# Starting Windows..."; sleep 1
-#this one is if optional you want to use LSF to run virtual box for you
-bsub -Is virtualbox --startvm Win7_64_super_3
+4. Use my script "startwin" and put it into a NFS PATH and modify it to fix your enviroment.
 
 ![screen shot 2017-02-05 at 10 04 01 pm](https://cloud.githubusercontent.com/assets/5915590/22634509/13842272-ebf0-11e6-933c-4514ac58e4e2.png)
 
