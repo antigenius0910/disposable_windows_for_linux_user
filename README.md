@@ -7,7 +7,7 @@ Everyone knows Microsoft Office make most profit for Microsoft, therefore there 
 
 For linux users there are LibreOffice, OpenOffice ,Calligra Suite... but Microsoft continuously changing their format so people can nerver leave Windows since you never know if your business patners will one day just couldn't open your OpenOffice files and you end up losing your time or busisness opportunities.
 
-this solution is for someone who have a Linux working enviroment but nobody needs anything from Windows besides Microsoft Office.
+This solution is for those who have a Linux working enviroment but nobody needs anything from Windows besides Microsoft Office.
 
 1. First we create a Windows image in VirtualBox. Install and register everything you need (Don't forget to install VirtualBox Guest Additions as well for NFS mount later).
 
