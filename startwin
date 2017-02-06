@@ -1,7 +1,7 @@
->#!/bin/bash
->#set -x
+#!/bin/bash
+#set -x
 
->echo "30%" ; sleep 1
+echo "30%" ; sleep 1
 echo "# Preparing the Virtual Machine to start"; sleep 1
 rm -rf ~/.VirtualBox
 cp -r /site/mtktools/VM/.VirtualBox ~/.VirtualBox
