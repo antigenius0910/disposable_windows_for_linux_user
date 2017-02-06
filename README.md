@@ -17,7 +17,7 @@ this solution is for someone who have a Linux working enviroment but nobody need
 
 4. Use my script and put it into a NFS PATH and modify it to fix your enviroment.
 
-#!/bin/bash
+>#!/bin/bash
 #set -x
 
 echo "30%" ; sleep 1
@@ -41,7 +41,7 @@ echo "# Starting Windows..."; sleep 1
 #this one is if optional you want to use LSF to run virtual box for you
 bsub -Is virtualbox --startvm Win7_64_super_3
 
-
+![screen shot 2017-02-05 at 10 04 01 pm](https://cloud.githubusercontent.com/assets/5915590/22634509/13842272-ebf0-11e6-933c-4514ac58e4e2.png)
 
 
 
