@@ -21,7 +21,7 @@ this solution is for someone who have a Linux working enviroment but nobody need
 
 ![screen shot 2017-02-05 at 10 04 01 pm](https://cloud.githubusercontent.com/assets/5915590/22634509/13842272-ebf0-11e6-933c-4514ac58e4e2.png)
 
-The best part is the this Windows image won't get any bigger and every user in your working enviroment only needs one Windows license. (Just make sure users save their files back to their home directory).
+The best part is the this Windows image won't get any bigger since everyone is sharing the same image once they shut the Windows down and start again everything get clean out and every user in your working enviroment only needs one Windows license. (Just make sure users save their files back to their home directory).
 
 
 
