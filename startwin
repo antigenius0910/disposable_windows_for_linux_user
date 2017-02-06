@@ -1,0 +1,23 @@
+>#!/bin/bash
+>#set -x
+
+>echo "30%" ; sleep 1
+echo "# Preparing the Virtual Machine to start"; sleep 1
+rm -rf ~/.VirtualBox
+cp -r /site/mtktools/VM/.VirtualBox ~/.VirtualBox
+
+echo "50%" ; sleep 1
+echo "# Configuring the Virtual Machine"; sleep 1
+#Win7_64_super is the image I create which have everthing I need for this Windows image
+sed -i "s/_CURRENTUSR_/$USER/g" ~/.VirtualBox/Win7_64_super_3/Win7_64_super_3.vbox
+sed -i "s/_CURRENTUSR_/$USER/g" ~/.VirtualBox/VirtualBox.xml
+
+echo "99%" ; sleep 1
+echo "# Starting Windows..."; sleep 1
+vboxmanage sharedfolder add Win7_64_super_3 --name $USER --hostpath /USERS_HOME_DIRECTORY/ --automount
+vboxmanage modifyvm Win7_64_super_3 --clipboard bidirectional
+
+echo "100%" ; sleep 1
+echo "# Starting Windows..."; sleep 1
+#this one is if optional you want to use LSF to run virtual box for you
+bsub -Is virtualbox --startvm Win7_64_super_3
