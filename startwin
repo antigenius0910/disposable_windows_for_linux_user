@@ -8,7 +8,7 @@ cp -r /YOUR_NFS_DIRECTORY/.VirtualBox ~/.VirtualBox
 
 echo "50%" ; sleep 1
 echo "# Configuring the Virtual Machine"; sleep 1
-#Win7_64_super is the image I create which have everthing I need for this Windows image
+#Win7_64_super is the image I've created which have everthing I need for this Windows image
 sed -i "s/_CURRENTUSR_/$USER/g" ~/.VirtualBox/Win7_64_super_3/Win7_64_super_3.vbox
 sed -i "s/_CURRENTUSR_/$USER/g" ~/.VirtualBox/VirtualBox.xml
 
