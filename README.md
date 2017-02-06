@@ -17,7 +17,11 @@ this solution is for someone who have a Linux working enviroment but nobody need
 
 4. Use my script "startwin" and put it into a NFS PATH and modify it to fix your enviroment.
 
+5. Voilà!!
+
 ![screen shot 2017-02-05 at 10 04 01 pm](https://cloud.githubusercontent.com/assets/5915590/22634509/13842272-ebf0-11e6-933c-4514ac58e4e2.png)
+
+The best part is the this Windows image won't get any bigger and every user in your working enviroment only needs one Windows license. (Just make sure users save thier files back to their home directory).
 
 
 
