@@ -18,9 +18,9 @@ this solution is for someone who have a Linux working enviroment but nobody need
 4. Use my script and put it into a NFS PATH and modify it to fix your enviroment.
 
 >#!/bin/bash
-#set -x
+>#set -x
 
-echo "30%" ; sleep 1
+>echo "30%" ; sleep 1
 echo "# Preparing the Virtual Machine to start"; sleep 1
 rm -rf ~/.VirtualBox
 cp -r /site/mtktools/VM/.VirtualBox ~/.VirtualBox
